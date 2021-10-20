@@ -15,7 +15,9 @@ When the user clicks on a cell it turns azure.
 const difficulty = parseInt(prompt("Choose a difficulty lever between 1 and 3"));
 const cellParent = document.querySelector(".row");
 
-createGrid();
+const test = 15;
+
+createGrid(test);
 
 
 
@@ -23,9 +25,10 @@ createGrid();
 function createGrid(cellNumbers) {
 
 
-
     for (let i = 0; i < cellNumbers; i++) {
-
+        const cell = document.createElement("div");
+        cell.className = "grid_cell"
+        cellParent.append(cell);
     }
 
 
