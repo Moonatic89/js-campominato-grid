@@ -21,12 +21,18 @@ createGrid(getRandomNumberByDifficulty(difficulty));
 function createGrid(cellNumbers) {
 
     for (let i = 0; i < cellNumbers; i++) {
+
         const cell = document.createElement("div");
         cell.className = "grid_cell";
         cell.innerHTML = (i + 1);
         cellParent.append(cell);
+
         cell.addEventListener("click", function () {
-            this.className += " green";
+            if (this.classList.contains("green")) {
+                this.classList.remove("green");
+            } else {
+                this.classList.add("green");
+            }
         });
     }
     // TODO - add event listener to cell 
