@@ -28,10 +28,10 @@ function createGrid(cellNumbers) {
         cellParent.append(cell);
 
         cell.addEventListener("click", function () {
-            if (this.classList.contains("green")) {
-                this.classList.remove("green");
+            if (this.classList.contains("azure")) {
+                this.classList.remove("azure");
             } else {
-                this.classList.add("green");
+                this.classList.add("azure");
             }
         });
     }
