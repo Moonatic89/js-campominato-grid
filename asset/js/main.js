@@ -15,27 +15,35 @@ When the user clicks on a cell it turns azure.
 const difficulty = parseInt(prompt("Choose a difficulty lever between 1 and 3"));
 const cellParent = document.querySelector(".row");
 
-const test = 15;
-
-createGrid(test);
-
-
+createGrid(getRandomNumberByDifficulty(difficulty));
 
 
 function createGrid(cellNumbers) {
-
 
     for (let i = 0; i < cellNumbers; i++) {
         const cell = document.createElement("div");
         cell.className = "grid_cell"
         cellParent.append(cell);
     }
-
+    // TODO - add event listener to cell 
+    // TODO - add number to cell
 
 }
 
-function getRandomNumberByDifficulty(randomInRange) {
+function getRandomNumberByDifficulty(difficultyToRange) {
 
+    if (difficultyToRange == 1) {
+        //1..100
+        return (Math.floor(Math.random() * 100) + 1);
+    } else if (difficultyToRange == 2) {
+        //1..81
+        return (Math.floor(Math.random() * 81) + 1);
+    } else if (difficultyToRange == 3) {
+        //1..49
+        return (Math.floor(Math.random() * 49) + 1);
+    } else {
+        alert("Invalid number. Please try again.")
+    }
 
 }
 
