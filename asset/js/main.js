@@ -22,11 +22,11 @@ function createGrid(cellNumbers) {
 
     for (let i = 0; i < cellNumbers; i++) {
         const cell = document.createElement("div");
-        cell.className = "grid_cell"
+        cell.className = "grid_cell";
+        cell.innerHTML = (i + 1);
         cellParent.append(cell);
     }
     // TODO - add event listener to cell 
-    // TODO - add number to cell
 
 }
 
