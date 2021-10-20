@@ -25,6 +25,9 @@ function createGrid(cellNumbers) {
         cell.className = "grid_cell";
         cell.innerHTML = (i + 1);
         cellParent.append(cell);
+        cell.addEventListener("click", function () {
+            this.className += " green";
+        });
     }
     // TODO - add event listener to cell 
 
@@ -45,6 +48,10 @@ function getRandomNumberByDifficulty(difficultyToRange) {
         alert("Invalid number. Please try again.")
     }
 
+}
+
+function colorSwitch() {
+    console.log(i);
 }
 
 
