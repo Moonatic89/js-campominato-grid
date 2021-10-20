@@ -13,3 +13,27 @@ When the user clicks on a cell it turns azure.
 */
 
 const difficulty = parseInt(prompt("Choose a difficulty lever between 1 and 3"));
+const cellParent = document.querySelector(".row");
+
+createGrid();
+
+
+
+
+function createGrid(cellNumbers) {
+
+
+
+    for (let i = 0; i < cellNumbers; i++) {
+
+    }
+
+
+}
+
+function getRandomNumberByDifficulty(randomInRange) {
+
+
+}
+
+
