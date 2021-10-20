@@ -15,15 +15,26 @@ When the user clicks on a cell it turns azure.
 const difficulty = parseInt(prompt("Choose a difficulty lever between 1 and 3"));
 const cellParent = document.querySelector(".row");
 
-createGrid(getRandomNumberByDifficulty(difficulty));
+createGrid(getRandomNumberByDifficulty(difficulty), difficulty);
 
 
-function createGrid(cellNumbers) {
+function createGrid(cellNumbers, divider) {
+
+    let swapSize;
+    if (divider == 1) {
+        swapSize = "grid_cell timesTen";
+    } else if (divider == 2) {
+        swapSize = "grid_cell timesNine";
+    } else if (divider == 3) {
+        swapSize = "grid_cell timesSeven";
+    }
 
     for (let i = 0; i < cellNumbers; i++) {
 
+
         const cell = document.createElement("div");
-        cell.className = "grid_cell";
+
+        cell.className = swapSize;
         cell.innerHTML = (i + 1);
         cellParent.append(cell);
 
