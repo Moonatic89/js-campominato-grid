@@ -15,18 +15,23 @@ When the user clicks on a cell it turns azure.
 const difficulty = parseInt(prompt("Choose a difficulty lever between 1 and 3"));
 const cellParent = document.querySelector(".row");
 
-createGrid(getRandomNumberByDifficulty(difficulty), difficulty);
+
+createGrid(difficulty);
 
 
-function createGrid(cellNumbers, divider) {
+function createGrid(divider) {
 
     let swapSize;
+    let cellNumbers;
     if (divider == 1) {
         swapSize = "grid_cell timesTen";
+        cellNumbers = 100;
     } else if (divider == 2) {
         swapSize = "grid_cell timesNine";
+        cellNumbers = 91;
     } else if (divider == 3) {
         swapSize = "grid_cell timesSeven";
+        cellNumbers = 49;
     }
 
     for (let i = 0; i < cellNumbers; i++) {
@@ -46,10 +51,9 @@ function createGrid(cellNumbers, divider) {
             }
         });
     }
-    // TODO - add event listener to cell 
-
 }
 
+/*
 function getRandomNumberByDifficulty(difficultyToRange) {
 
     if (difficultyToRange == 1) {
@@ -66,9 +70,6 @@ function getRandomNumberByDifficulty(difficultyToRange) {
     }
 
 }
-
-function colorSwitch() {
-    console.log(i);
-}
+*/
 
 
